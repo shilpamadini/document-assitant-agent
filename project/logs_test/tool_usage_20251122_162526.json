@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": "2025-11-22T16:25:26.214683",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "2 + 3"
+    },
+    "output": "{'result': 5}"
+  }
+]

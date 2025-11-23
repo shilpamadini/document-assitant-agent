@@ -1,0 +1,54 @@
+[
+  {
+    "timestamp": "2025-11-22T16:36:18.232991",
+    "tool_name": "document_search",
+    "input": {
+      "query": "contracts",
+      "search_type": "type",
+      "doc_type": "contract",
+      "min_amount": null,
+      "max_amount": null,
+      "comparison": null,
+      "amount": null
+    },
+    "output": "{'results_count': 1}"
+  },
+  {
+    "timestamp": "2025-11-22T16:36:20.438243",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "CON-001"
+    },
+    "output": "{'found': True, 'doc_type': 'contract'}"
+  },
+  {
+    "timestamp": "2025-11-22T16:36:47.474817",
+    "tool_name": "document_search",
+    "input": {
+      "query": "INV-001",
+      "search_type": "type",
+      "doc_type": "invoice",
+      "min_amount": null,
+      "max_amount": null,
+      "comparison": null,
+      "amount": null
+    },
+    "output": "{'results_count': 3}"
+  },
+  {
+    "timestamp": "2025-11-22T16:36:49.623846",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-001"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  },
+  {
+    "timestamp": "2025-11-22T16:36:51.467374",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "20000 + 2000"
+    },
+    "output": "{'result': 22000}"
+  }
+]

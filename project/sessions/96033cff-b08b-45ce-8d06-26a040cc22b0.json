@@ -1,0 +1,639 @@
+{
+  "session_id": "96033cff-b08b-45ce-8d06-26a040cc22b0",
+  "user_id": "demo_user",
+  "conversation_history": [
+    {
+      "content": "You are an expert document summarizer specializing in financial and healthcare documents.\n\nYour approach:\n- Extract key information and main points\n- Organize summaries logically\n- Highlight important numbers, dates, and parties\n- Keep summaries concise but comprehensive\n\nGuidelines:\n1. First search for and read the relevant documents\n2. Structure summaries with clear sections\n3. Include document IDs in your summary\n4. Focus on actionable information\n",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "system",
+      "name": null,
+      "id": "f90fe7e3-f0ad-4aee-a289-00d1ba760ca3"
+    },
+    {
+      "content": "Summarize all contracts",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "647d84b8-fda3-427c-ba60-440c6e1902c2"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 24,
+          "prompt_tokens": 664,
+          "total_tokens": 688,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_74ab616da4",
+        "id": "chatcmpl-CerpdwaPL1rfT9m6NqAD0qMJv0ggE",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--00e6f9fc-b8b9-4ee0-b6a2-d8b36793c486-0",
+      "tool_calls": [
+        {
+          "name": "document_search",
+          "args": {
+            "query": "contracts",
+            "search_type": "type",
+            "doc_type": "contract"
+          },
+          "id": "call_mOpxbgka2J137Hrn1D0sEfl6",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 664,
+        "output_tokens": 24,
+        "total_tokens": 688,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "Found 1 document(s):\n\nDocument 1 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\n",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "document_search",
+      "id": "895fc026-ee47-4497-8e0e-5297f01224f4",
+      "tool_call_id": "call_mOpxbgka2J137Hrn1D0sEfl6",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 17,
+          "prompt_tokens": 783,
+          "total_tokens": 800,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_74ab616da4",
+        "id": "chatcmpl-CerpgvgxwQ3CYObX2emiiCT5GzfJA",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--85163d02-6021-454a-a9df-c9fe1634761f-0",
+      "tool_calls": [
+        {
+          "name": "document_reader",
+          "args": {
+            "doc_id": "CON-001"
+          },
+          "id": "call_jpsldtulBkUm6BRWxOt6gq1s",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 783,
+        "output_tokens": 17,
+        "total_tokens": 800,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "Document CON-001:\nAmount: $180,000.00\n\n\n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: Healthcare Partners LLC\n\n                Services:\n                1. Document Processing Platform Access\n                2. 24/7 Technical Support\n                3. Monthly Data Analytics Reports\n                4. Compliance Monitoring\n\n                Duration: 12 months\n                Monthly Fee: $15,000\n                Total Contract Value: $180,000\n\n                Termination: Either party may terminate with 60 days written notice.\n                ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "document_reader",
+      "id": "feca155d-f7a1-4693-b2f0-f43d81872751",
+      "tool_call_id": "call_jpsldtulBkUm6BRWxOt6gq1s",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "### Contract Summary\n\n**Document ID:** CON-001  \n**Title:** Service Agreement  \n**Date:** January 1, 2024  \n**Parties Involved:**  \n- **Provider:** DocDacity Solutions Inc.  \n- **Client:** Healthcare Partners LLC  \n\n**Services Provided:**  \n1. Document Processing Platform Access  \n2. 24/7 Technical Support  \n3. Monthly Data Analytics Reports  \n4. Compliance Monitoring  \n\n**Financial Details:**  \n- **Monthly Fee:** $15,000  \n- **Total Contract Value:** $180,000  \n\n**Duration:** 12 months  \n\n**Termination Clause:**  \n- Either party may terminate the agreement with 60 days written notice.  \n\nThis contract outlines the provision of various services by DocDacity Solutions Inc. to Healthcare Partners LLC, with a focus on document processing and support services over a one-year period.",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 177,
+          "prompt_tokens": 944,
+          "total_tokens": 1121,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_74ab616da4",
+        "id": "chatcmpl-CerpiUW2lVE8bT4AcaGUvCgSvMP5n",
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--871f8d85-4ce4-46fa-85fa-0a193e228a8e-0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 944,
+        "output_tokens": 177,
+        "total_tokens": 1121,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "You are an expert document summarizer specializing in financial and healthcare documents.\n\nYour approach:\n- Extract key information and main points\n- Organize summaries logically\n- Highlight important numbers, dates, and parties\n- Keep summaries concise but comprehensive\n\nGuidelines:\n1. First search for and read the relevant documents\n2. Structure summaries with clear sections\n3. Include document IDs in your summary\n4. Focus on actionable information\n",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "system",
+      "name": null,
+      "id": "f90fe7e3-f0ad-4aee-a289-00d1ba760ca3"
+    },
+    {
+      "content": "Summarize all contracts",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "647d84b8-fda3-427c-ba60-440c6e1902c2"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 24,
+          "prompt_tokens": 664,
+          "total_tokens": 688,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_74ab616da4",
+        "id": "chatcmpl-CerpdwaPL1rfT9m6NqAD0qMJv0ggE",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--00e6f9fc-b8b9-4ee0-b6a2-d8b36793c486-0",
+      "tool_calls": [
+        {
+          "name": "document_search",
+          "args": {
+            "query": "contracts",
+            "search_type": "type",
+            "doc_type": "contract"
+          },
+          "id": "call_mOpxbgka2J137Hrn1D0sEfl6",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 664,
+        "output_tokens": 24,
+        "total_tokens": 688,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "Found 1 document(s):\n\nDocument 1 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\n",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "document_search",
+      "id": "895fc026-ee47-4497-8e0e-5297f01224f4",
+      "tool_call_id": "call_mOpxbgka2J137Hrn1D0sEfl6",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 17,
+          "prompt_tokens": 783,
+          "total_tokens": 800,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_74ab616da4",
+        "id": "chatcmpl-CerpgvgxwQ3CYObX2emiiCT5GzfJA",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--85163d02-6021-454a-a9df-c9fe1634761f-0",
+      "tool_calls": [
+        {
+          "name": "document_reader",
+          "args": {
+            "doc_id": "CON-001"
+          },
+          "id": "call_jpsldtulBkUm6BRWxOt6gq1s",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 783,
+        "output_tokens": 17,
+        "total_tokens": 800,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "Document CON-001:\nAmount: $180,000.00\n\n\n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: Healthcare Partners LLC\n\n                Services:\n                1. Document Processing Platform Access\n                2. 24/7 Technical Support\n                3. Monthly Data Analytics Reports\n                4. Compliance Monitoring\n\n                Duration: 12 months\n                Monthly Fee: $15,000\n                Total Contract Value: $180,000\n\n                Termination: Either party may terminate with 60 days written notice.\n                ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "document_reader",
+      "id": "feca155d-f7a1-4693-b2f0-f43d81872751",
+      "tool_call_id": "call_jpsldtulBkUm6BRWxOt6gq1s",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "### Contract Summary\n\n**Document ID:** CON-001  \n**Title:** Service Agreement  \n**Date:** January 1, 2024  \n**Parties Involved:**  \n- **Provider:** DocDacity Solutions Inc.  \n- **Client:** Healthcare Partners LLC  \n\n**Services Provided:**  \n1. Document Processing Platform Access  \n2. 24/7 Technical Support  \n3. Monthly Data Analytics Reports  \n4. Compliance Monitoring  \n\n**Financial Details:**  \n- **Monthly Fee:** $15,000  \n- **Total Contract Value:** $180,000  \n\n**Duration:** 12 months  \n\n**Termination Clause:**  \n- Either party may terminate the agreement with 60 days written notice.  \n\nThis contract outlines the provision of various services by DocDacity Solutions Inc. to Healthcare Partners LLC, with a focus on document processing and support services over a one-year period.",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 177,
+          "prompt_tokens": 944,
+          "total_tokens": 1121,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_74ab616da4",
+        "id": "chatcmpl-CerpiUW2lVE8bT4AcaGUvCgSvMP5n",
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--871f8d85-4ce4-46fa-85fa-0a193e228a8e-0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 944,
+        "output_tokens": 177,
+        "total_tokens": 1121,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "You are an accurate calulator document assistant specializing in financial and healthcare documents.\n\nResponsibilities:\n1. Identify which documents contain the numerical information required to perform the calculation.\n2. Search for those relevant documents.\n3. Carefully extract the key information such as numbers, dates, units, and fields.\n4. Determine the correct mathematical formula needed to answer the user's question.\n5. Use the calculator tool to perform ALL calculations,even simple ones like 2+2.\n6. Present results clearly, include units, and cite the document IDs used.\n\nRules:\n- NEVER perform mental math. ALWAYS call the calculator tool for every computation.\n- NEVER guess values. If information is missing or ambiguous, say so explicitly.\n- ALWAYS verify that extracted numbers come from the correct document and field.\n- ALWAYS maintain high precision when dealing with percentages, currency, or time-based calculations.\n\nOutput:\n- The identified documents\n- The extracted numeric values used for calculation\n- The mathematical expression used for calculation\n- The calculator tool output\n- A clear, correct final answer\n",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "system",
+      "name": null,
+      "id": "4ceef375-aba1-45da-be16-538c84cdba52"
+    },
+    {
+      "content": "Find documents with amounts over $50,000",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "2cf38c13-4144-40bb-911e-0cc812b3fa9b"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 33,
+          "prompt_tokens": 1351,
+          "total_tokens": 1384,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_c98e05ca17",
+        "id": "chatcmpl-CerqIcIL1Sz2NM0BR3NUGKGp14Zrm",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--4966a026-d419-46ca-856b-d865f474efab-0",
+      "tool_calls": [
+        {
+          "name": "document_search",
+          "args": {
+            "query": "documents over $50,000",
+            "search_type": "amount",
+            "comparison": "over",
+            "amount": 50000
+          },
+          "id": "call_OaIjHVhYRjVE4nipe3GxRyWz",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 1351,
+        "output_tokens": 33,
+        "total_tokens": 1384,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "document_search",
+      "id": "0ebff8b4-e2fa-4ec2-9021-bdf0c5f2718e",
+      "tool_call_id": "call_OaIjHVhYRjVE4nipe3GxRyWz",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 50,
+          "prompt_tokens": 1649,
+          "total_tokens": 1699,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_c98e05ca17",
+        "id": "chatcmpl-CerqLKbjV6f8nJrxNnKBjlwqrGbM1",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--1edca27c-2e6e-4f7f-8fa7-ea314b732786-0",
+      "tool_calls": [
+        {
+          "name": "document_reader",
+          "args": {
+            "doc_id": "INV-003"
+          },
+          "id": "call_AmcjrNfS0pqZKa6IkXABcdNL",
+          "type": "tool_call"
+        },
+        {
+          "name": "document_reader",
+          "args": {
+            "doc_id": "INV-002"
+          },
+          "id": "call_9wwooCZNuGSWxadxjgpUSJyf",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 1649,
+        "output_tokens": 50,
+        "total_tokens": 1699,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "Document INV-003:\nAmount: $214,500.00\n\n\n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premium Support: $30,000\n                - Custom Development: $45,000\n\n                Subtotal: $195,000\n                Tax (10%): $19,500\n                Total Due: $214,500\n\n                Payment Terms: Net 60 days\n                ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "document_reader",
+      "id": "64bd7d72-76a8-4eef-a207-f6bb90460695",
+      "tool_call_id": "call_AmcjrNfS0pqZKa6IkXABcdNL",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "Document INV-002:\nAmount: $69,300.00\n\n\n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n                - Implementation Services: $15,000\n                - Training Package: $5,000\n\n                Subtotal: $70,000\n                Discount (10%): -$7,000\n                Tax (10%): $6,300\n                Total Due: $69,300\n\n                Payment Terms: Net 45 days\n                ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "document_reader",
+      "id": "0c8da4dc-c404-44a5-84ed-f7d2829b4b89",
+      "tool_call_id": "call_9wwooCZNuGSWxadxjgpUSJyf",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "### Documents with Amounts Over $50,000\n\n#### 1. Invoice #12347\n**Document ID:** INV-003  \n**Date:** March 1, 2024  \n**Client:** Global Corp  \n\n**Services Provided:**  \n- Annual Subscription: $120,000  \n- Premium Support: $30,000  \n- Custom Development: $45,000  \n\n**Financial Details:**  \n- **Subtotal:** $195,000  \n- **Tax (10%):** $19,500  \n- **Total Due:** $214,500  \n\n**Payment Terms:** Net 60 days  \n\n---\n\n#### 2. Service Agreement\n**Document ID:** CON-001  \n**Date:** January 1, 2024  \n**Parties Involved:**  \n- **Provider:** DocDacity Solutions Inc.  \n- **Client:** Healthcare Partners LLC  \n\n**Services Provided:**  \n1. Document Processing Platform Access  \n2. 24/7 Technical Support  \n3. Monthly Data Analytics Reports  \n4. Compliance Monitoring  \n\n**Financial Details:**  \n- **Monthly Fee:** $15,000  \n- **Total Contract Value:** $180,000  \n\n**Duration:** 12 months  \n\n**Termination Clause:**  \n- Either party may terminate the agreement with 60 days written notice.  \n\n---\n\n#### 3. Invoice #12346\n**Document ID:** INV-002  \n**Date:** February 20, 2024  \n**Client:** TechStart Inc.  \n\n**Products Provided:**  \n- Enterprise License (Annual): $50,000  \n- Implementation Services: $15,000  \n- Training Package: $5,000  \n\n**Financial Details:**  \n- **Subtotal:** $70,000  \n- **Discount (10%):** -$7,000  \n- **Tax (10%):** $6,300  \n- **Total Due:** $69,300  \n\n**Payment Terms:** Net 45 days  \n\nThese documents include invoices and a service agreement with amounts exceeding $50,000, detailing various services and products provided to different clients.",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 420,
+          "prompt_tokens": 1961,
+          "total_tokens": 2381,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 1664
+          }
+        },
+        "model_provider": "openai",
+        "model_name": "gpt-4o-2024-08-06",
+        "system_fingerprint": "fp_c98e05ca17",
+        "id": "chatcmpl-CerqNbnoZDzxnlvSHWALGZW0f9afk",
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--7f39614d-85d7-4c4e-a841-8bf17a1d2821-0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 1961,
+        "output_tokens": 420,
+        "total_tokens": 2381,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1664
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  ],
+  "document_context": [
+    "CON-001",
+    "INV-003",
+    "INV-002"
+  ],
+  "created_at": "2025-11-22T16:01:07.450505",
+  "last_updated": "2025-11-22T16:02:22.739920"
+}

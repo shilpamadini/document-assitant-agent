@@ -1,0 +1,54 @@
+[
+  {
+    "timestamp": "2025-11-22T16:01:27.456946",
+    "tool_name": "document_search",
+    "input": {
+      "query": "contracts",
+      "search_type": "type",
+      "doc_type": "contract",
+      "min_amount": null,
+      "max_amount": null,
+      "comparison": null,
+      "amount": null
+    },
+    "output": "{'results_count': 1}"
+  },
+  {
+    "timestamp": "2025-11-22T16:01:30.409745",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "CON-001"
+    },
+    "output": "{'found': True, 'doc_type': 'contract'}"
+  },
+  {
+    "timestamp": "2025-11-22T16:02:08.608362",
+    "tool_name": "document_search",
+    "input": {
+      "query": "documents over $50,000",
+      "search_type": "amount",
+      "doc_type": null,
+      "min_amount": null,
+      "max_amount": null,
+      "comparison": "over",
+      "amount": 50000.0
+    },
+    "output": "{'results_count': 3}"
+  },
+  {
+    "timestamp": "2025-11-22T16:02:11.064930",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-003"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  },
+  {
+    "timestamp": "2025-11-22T16:02:11.066147",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-002"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  }
+]
