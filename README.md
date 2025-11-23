@@ -1,6 +1,6 @@
 # Document Assistant Agent
 
-Welcome to the Document Assistant project! This project will help you build a sophisticated document processing system using LangChain and LangGraph. You'll create an AI assistant that can answer questions, summarize documents, and perform calculations on financial and healthcare documents.
+This project implements an intelligent multi-agent document assistant built with Python, LangChain, and LangGraph. The system can answer questions about financial and healthcare documents, summarize document content, perform calculations using extracted document data, maintain conversation memory across turns, and leverage tools such as document search, document reader, and a safe calculator. The assistant operates through a LangGraph workflow that classifies the user’s intent, routes the request to the appropriate agent—Q&A, Summarization, or Calculation—and then updates persistent memory after each interaction.
 
 ## Project Overview
 
