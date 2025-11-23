@@ -74,7 +74,7 @@ doc_assistant_project/
 
 The LangGraph agent follows this workflow:
 
-![](./docs/langgraph_agent_architecture.png)
+![doc_assistant_agent](https://github.com/shilpamadini/document-assitant-agent/blob/c97130dab0ba9f49d0b249733c5b22f9ebf4e146/project/docs/langgraph_agent_architecture.png)
 
 ## Implementation Tasks
 
