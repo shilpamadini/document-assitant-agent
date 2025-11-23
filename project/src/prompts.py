@@ -9,6 +9,7 @@ def get_intent_classification_prompt() -> PromptTemplate:
     """
     Get the intent classification prompt template.
     """
+    
     return PromptTemplate(
         input_variables=["user_input", "conversation_history"],
         template="""You are an intent classifier for a document processing assistant.
@@ -19,12 +20,53 @@ Given the user input and conversation history, classify the user's intent into o
 - calculation: Mathematical operations or numerical computations. Or questions about documents that may require calculations
 - unknown: Cannot determine the intent clearly
 
+Always return:
+- intent_type
+- confidence (0 to 1)
+- reasoning (1–3 sentences)
+
+## FEW-SHOT EXAMPLES (Follow This Exact Format)
+
+### Example 1
+User Input: "What is the total amount listed in invoice INV-001?"
+intent_type: "qa"
+confidence: 0.95
+reasoning: "User is asking for an existing value from the document, not performing a new computation."
+
+### Example 2
+User Input: "Summarize all insurance claim documents."
+intent_type: "summarization"
+confidence: 0.94
+reasoning: "User explicitly requests a summary of multiple documents."
+
+### Example 3
+User Input: "Add up all invoice totals over $10,000."
+intent_type: "calculation"
+confidence: 0.98
+reasoning: "User is requesting a mathematical computation involving document values."
+
+### Example 4
+User Input: "How many claims mention hospital visits?"
+intent_type: "qa"
+confidence: 0.90
+reasoning: "User is asking for extraction/filtering of information, not a numeric calculation."
+
+### Example 5
+User Input: "Explain what this record means."
+intent_type: "summarization"
+confidence: 0.85
+reasoning: "User is requesting explanation/summary rather than data lookup or computation."
+
+## Now analyze the user's request and classify their intent with a confidence score and brief reasoning.
+
 User Input: {user_input}
 
 Recent Conversation History:
 {conversation_history}
 
-Analyze the user's request and classify their intent with a confidence score and brief reasoning.
+Return a classification with:
+intent_type, confidence, and reasoning.
+
 """
     )
 
@@ -64,7 +106,6 @@ Guidelines:
 """
 
 # Calculation System Prompt
-# TODO: Implement the CALCULATION_SYSTEM_PROMPT. Refer to README.md Task 3.2 for details
 CALCULATION_SYSTEM_PROMPT = """You are an accurate calulator document assistant specializing in financial and healthcare documents.
 
 Responsibilities:
