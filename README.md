@@ -54,18 +54,40 @@ python main.py
 
 ## Project Structure
 ```
-doc_assistant_project/
+# Document Assistant Project
+
+This project implements an intelligent multi-agent document assistant using **Python**, **LangChain**, and **LangGraph**.  
+The assistant can:
+
+- Answer questions about financial and healthcare documents (Q&A agent)
+- Summarize documents and extract key points (Summarization agent)
+- Perform calculations over document data using tools (Calculation agent)
+
+---
+
+## Project Structure
+
+```text
+project/
+├── main.py              
+├── requirements.txt     
+├── README.md            
 ├── src/
-│   ├── schemas.py        # Pydantic models
-│   ├── retrieval.py      # Document retrieval
-│   ├── tools.py          # Agent tools
-│   ├── prompts.py        # Prompt templates
-│   ├── agent.py          # LangGraph workflow
-│   └── assistant.py      # Main agent
-├── sessions/             # Saved conversation sessions
-├── main.py               # Entry point
-├── requirements.txt      # Dependencies
-└── README.md             # This file
+│   ├── __init__.py      
+│   ├── agent.py         # LangGraph workflow and AgentState
+│   ├── assistant.py     # DocumentAssistant class (session + workflow wrapper)
+│   ├── tools.py         # Calculator + document tools
+│   ├── prompts.py       # System and chat prompts
+│   ├── retrieval.py     # Simulated document retriever
+│   ├── schemas.py       # Pydantic models (AnswerResponse, UserIntent, etc.)
+│   └── main.py          # CLI runner for the assistant
+└── tests/
+    ├── __init__.py
+    ├── test_schemas.py
+    ├── test_tools_calculator.py
+    ├── test_retrieval.py
+    └── test_prompts.py
+
 ```
 
 
